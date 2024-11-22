@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./img/favicon.jpg">
+    <title>順緣中軸社</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        /* 首頁區 */
+        .header {
+            width: 100%;
+            height: 500px;
+            background-image: url("./img/banner4.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:100%;
+            /* 定位基準點 */
+            position: relative;
+        }
+
+
+        .header .title {
+            text-align: center;
+            color: #080808;
+            margin-top: 0%;
+            padding-top: 20px;
+        }
+
+        .header .logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 150px;
+        }
+
+
+        /* 中間選單區nav */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #797270;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* 設定nav選單區內文字框的高度與寬度及背景色 */
+        .nav a {
+            display: block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #797270;
+            color: #312d2d;
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+        }
+
+        /* 設定nav選單區所有選單顯示樣式及內間距 */
+
+        .nav ul {
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .nav li {
+            list-style: none;
+            float: left;
+        }
+
+
+        .nav ul li {
+            /* 水平排列 */
+            display: inline;
+            margin-bottom: 1px;
+        }
+
+        .nav li li {
+            /* 解除浮動 */
+            clear: left;
+
+        }
+
+        /* * 解決menu定位推擠 */
+        .nav ul ul {
+            position: absolute;
+            display: none;
+        }
+
+
+        /* 選單區超連結 */
+        .nav ul li a {
+            color: #111111;
+            background-color: rgb(190, 185, 185);
+            text-decoration: none;
+            /* 內間距(縮排) => padding */
+            /* 順時針方向設定 */
+            /* padding: 10px 20px 10px 20px; */
+            padding: 10px 20px;
+            /* 圓角 */
+            border-radius: 5px;
+            /* 外間距 => margin */
+            margin-left: 10px;
+        }
+
+        .nav li:hover ul {
+            display: block;
+        }
+
+
+        /* 選單區超連結被碰到時的變化 */
+        .nav ul li a:hover {
+            background-color: rgb(99, 89, 86);
+            color: #fff;
+            font-size: 1rem;
+
+        }
+
+        /*content 區 */
+        .content {
+            background-color: rgb(238, 235, 234);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        aside {
+            width: 20%;
+            order: 1;
+            text-align: center;
+        }
+
+
+        article {
+            width: 70%;
+            order: 2;
+        }
+
+        .ad {
+            order: 3;
+        }
+
+        .content .box2 {
+            padding-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
+        .box2 .list-type {
+            list-style: none;
+            padding: 10px 10px;
+            padding-top: 5px;
+            margin-left: 40px;
+        }
+
+        .list-type a {
+            color: #432;
+            padding: 10px;
+            display: block;
+        }
+
+        .list-type a:hover {
+            color: #0bd;
+        }
+
+
+        .box2 .logo {
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+        }
+
+        .fb a {
+            background-image: url("./img/facebook.png");
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: 85px center;
+        }
+
+
+        .wrapper {
+            width: 1000px;
+            margin: auto;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+
+        .box2 .practice3 {
+            font-size: 2rem;
+            color: blue;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+
+
+        .wrapper .box {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            gap: 2px;
+            border: #0bd solid;
+
+        }
+
+        .wrapper .box .item {
+            background: #a79795;
+            color: #fff;
+            margin: 2px;
+            padding: 5px;
+            text-align: left;
+
+        }
+
+
+        /* 頁尾區 */
+        .footer {
+            background-color: #66625f;
+            color: #fff;
+            text-align: center;
+            padding-top:20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最外層外框 -->
+    <div class="wrap">
+        <!-- 頁首區 -->
+        <!-- logo 顯示區 -->
+
+        <div class="header">
+            <h1>
+                <p class="title">桃園市順緣太極拳協會中軸社</p>
+            </h1>
+            <h2>
+                <img class="logo" src="./img/logo1.png" alt="順緣中軸社">
+            </h2>
+        </div>
+
+        <!-- 頁首區 header 結束 -->
+        <!-- 中間選單區 -->
+        <div class="nav">
+            <ul>
+                <li><a href="introduce.html">社團簡介</a></li>
+                <li><a href="#">授課內容</a>
+                    <ul>
+                        <li><a href="tg37.html">鄭子37式</a></li>
+                        <li><a href="tg13.html">13勢太極棒</a></li>
+                        <li><a href="tg54.html">54式太極劍</a></li>
+                        <li><a href="tg32.html">32式太極刀</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">比賽花絮</a>
+                    <ul>
+                        <li><a href="demo1.html">比賽佳績留影</a></li>
+                        <li><a href="demo2.html">經典表演影片</a></li>
+                    </ul>
+                </li>
+                <li><a href="sign_up.html">招生報名</a></li>
+            </ul>
+        </div>
+
+        <!-- 中間選單區nav 結束 -->
+        <div class="content">
+            <aside>
+                <div class="box2">
+                    <ul class="list-type">
+                        <li class="fb"><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
+                        <li><a href="map.html">練習地點</a></li>
+                        <li><a href="contact_us.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <article>
+                <div class="box2">
+                    <div class="wrapper">
+                        <P class="practice3">五十四式太極劍</P>
+                        <div class="box">
+                            <div class="item">1.起勢</div>
+                            <div class="item">2.上步合劍</div>
+                            <div class="item">3.仙人指路</div>
+                            <div class="item">4.三環套月</div>
+                            <div class="item">5.大魁星</div>
+                            <div class="item">6.燕子抄水</div>
+                            <div class="item">7.左右攔掃</div>
+                            <div class="item">8.小魁星</div>
+                            <div class="item">9.黃蜂入洞</div>
+                            <div class="item">10.靈貓捕鼠</div>
+                            <div class="item">11.蜻蜓點水</div>
+                            <div class="item">12.燕子入巢</div>
+                            <div class="item">13.大鵬展翅</div>
+                            <div class="item">14.右旋風</div>
+                            <div class="item">15.小魁星</div>
+                            <div class="item">16.左旋風</div>
+                            <div class="item">17.等魚式</div>
+                            <div class="item">18.撥草蕁蛇</div>
+                            <div class="item">19.懷中抱月</div>
+                            <div class="item">20.宿鳥投林</div>
+                            <div class="item">21.烏龍擺尾</div>
+                            <div class="item">22.風捲荷莱</div>
+                            <div class="item">23.獅子搖頭</div>
+                            <div class="item">24.虎抱頭</div>
+                            <div class="item">25.野馬跳澗</div>
+                            <div class="item">26.翻身勒馬</div>
+                            <div class="item">27.指南針</div>
+                            <div class="item">28.迎風撣塵</div>
+                            <div class="item">29.順水推舟</div>
+                            <div class="item">30.流星趕月</div>
+                            <div class="item">31.天馬飛瀑</div>
+                            <div class="item">32.挑簾式</div>
+                            <div class="item">33.左右車輪</div>
+                            <div class="item">34.燕子含泥</div>
+                            <div class="item">35.大鵬展翅</div>
+                            <div class="item">36.海底撈月</div>
+                            <div class="item">37.懷中抱月</div>
+                            <div class="item">38.夜叉探海</div>
+                            <div class="item">39.犀牛望月</div>
+                            <div class="item">40.射雁式</div>
+                            <div class="item">41.青龍探爪</div>
+                            <div class="item">42.鳳凰雙展翅</div>
+                            <div class="item">43.左右跨欄</div>
+                            <div class="item">44.射雁式</div>
+                            <div class="item">45.白猿獻果</div>
+                            <div class="item">46.落花式</div>
+                            <div class="item">47.玉女穿梭</div>
+                            <div class="item">48.白虎攪尾</div>
+                            <div class="item">49.魚躍龍門</div>
+                            <div class="item">50.鳥龍絞柱</div>
+                            <div class="item">51.仙人指路</div>
+                            <div class="item">52.風掃梅雪</div>
+                            <div class="item">53.捧芴式</div>
+                            <div class="item">54.抱劍歸原</div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <div class="ad">
+                <div class="box2">
+                    <p>
+                        <img class="logo" src="./img/logo2.png" alt="">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 頁尾區 -->
+    <div class="footer">
+        <h2>順緣中軸社</h2>
+        <h4>Copyright &copy; 順緣中軸社 版權所有. All rights reserved.</h4>
+    </div>
+</body>
+
+</html>

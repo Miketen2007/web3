@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" href="./img/favicon.jpg">
+    <title>龍潭中軸社</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 100%;
+        }
+
+        /* 首頁區 */
+        .header {
+            width: 100%;
+            height: 500px;
+            background-image: url("./img/banner1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:100%;
+            /* 定位基準點 */
+            position: relative;
+        }
+
+
+        .header .title {
+            text-align: center;
+            color: #080808;
+            margin-top: 0%;
+            padding-top: 20px;
+        }
+
+        .header .logo {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 150px;
+        }
+
+
+        /* 中間選單區nav */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: #797270;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* 設定nav選單區內文字框的高度與寬度及背景色 */
+        .nav a {
+            display: block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #797270;
+            color: #312d2d;
+            text-decoration: none;
+            text-align: center;
+            transition: all .3s;
+        }
+
+        /* 設定nav選單區所有選單顯示樣式及內間距 */
+
+        .nav ul {
+            list-style: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .nav li {
+            list-style: none;
+            float: left;
+        }
+
+
+        .nav ul li {
+            /* 水平排列 */
+            display: inline;
+            margin-bottom: 1px;
+        }
+
+        .nav li li {
+            /* 解除浮動 */
+            clear: left;
+
+        }
+
+        /* * 解決menu定位推擠 */
+        .nav ul ul {
+            position: absolute;
+            display: none;
+        }
+
+
+        /* 選單區超連結 */
+        .nav ul li a {
+            color: #111111;
+            background-color: rgb(190, 185, 185);
+            text-decoration: none;
+            /* 內間距(縮排) => padding */
+            /* 順時針方向設定 */
+            /* padding: 10px 20px 10px 20px; */
+            padding: 10px 20px;
+            /* 圓角 */
+            border-radius: 5px;
+            /* 外間距 => margin */
+            margin-left: 10px;
+        }
+
+        .nav li:hover ul {
+            display: block;
+        }
+
+
+        /* 選單區超連結被碰到時的變化 */
+        .nav ul li a:hover {
+            background-color: rgb(99, 89, 86);
+            color: #fff;
+            font-size: 1rem;
+
+        }
+
+        /*content 區 */
+        .content {
+            background-color: rgb(238, 235, 234);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        aside {
+            width: 20%;
+            order: 1;
+            text-align: center;
+        }
+
+
+        article {
+            width: 70%;
+            order: 2;
+        }
+
+        .ad {
+            order: 3;
+        }
+
+        .content .box2 {
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+
+        .box2 .list-type {
+            display: block;
+            list-style: none;
+            padding: 10px 10px;
+            padding-top: 5px;
+            margin-left: 40px;
+            /* border: red 1px solid; */
+
+        }
+
+        .list-type a {
+            color: #432;
+            padding: 10px;
+            display: block;
+        }
+
+        .list-type a:hover {
+            color: #0bd;
+        }
+
+        .box2 .news {
+            margin-bottom: 20px;
+        }
+
+        .box2 .post-title {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .box2 .post-date {
+            color: blue;
+            font-size: 1.5rem;
+        }
+
+        .box2 .news-content {
+            border: rgb(167, 130, 130) solid;
+            padding: 10px;
+            line-height: 2rem;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .box2 .foot-title {
+            color: rgb(48, 8, 225);
+            padding: 10px;
+            font-size: 2rem;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+
+
+        .box2 .logo {
+            width: 100%;
+            height: 100%;
+            margin-left: 10px;
+        }
+
+        .fb a {
+            background-image: url("./img/facebook.png");
+            background-repeat: no-repeat;
+            background-size: 30px;
+            background-position: 80px center;
+        }
+
+        /* 頁尾區 */
+        .footer {
+            background-color: #66625f;
+            color: #fff;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 最外層外框 -->
+    <div class="wrap">
+        <!-- 頁首區 -->
+        <!-- logo 顯示區 -->
+
+        <div class="header">
+            <h1>
+                <p class="title">桃園市順緣太極拳協會龍潭中軸社</p>
+            </h1>
+            <h2>
+                <img class="logo" src="./img/logo1.png" alt="龍潭中軸社">
+            </h2>
+        </div>
+
+        <!-- 頁首區 header 結束 -->
+        <!-- 中間選單區 -->
+        <div class="nav">
+            <ul>
+                <li><a href="introduce.html">社團簡介</a></li>
+                <li><a href="#">授課內容</a>
+                    <ul>
+                        <li><a href="tg37.html">鄭子37式</a></li>
+                        <li><a href="tg13.html">13勢太極棒</a></li>
+                        <li><a href="tg54.html">54式太極劍</a></li>
+                        <li><a href="tg32.html">32式太極刀</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">比賽花絮</a>
+                    <ul>
+                        <li><a href="demo1.html">比賽佳績留影</a></li>
+                        <li><a href="demo2.html">經典表演影片</a></li>
+                    </ul>
+                </li>
+                <li><a href="sign_up.html">招生報名</a></li>
+            </ul>
+        </div>
+
+        <!-- 中間選單區nav 結束 -->
+
+        <div class="content">
+            <aside>
+                <div class="box2">
+                    <ul class="list-type">
+                        <li class="fb"><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
+                        <li><a href="map.html">練習地點</a></li>
+                        <li><a href="contact_us.html">聯絡我們</a></li>
+                    </ul>
+                </div>
+
+            </aside>
+
+            <article>
+                <div class="box2">
+                    <div class="news">
+                        <h2 class="post-title">最新消息
+                            <span class="post-date">2025/4/1</span>
+                        </h2>
+                    </div>
+                    <div class="news-content">
+                        <h2>太極拳招生</h2>
+                        <h3>開課日期:</h3>
+                        <p>每年4月1日</p>
+                        <h3>課程介紹:</h3>
+                        <p>太極拳是中國傳統武術與養生運動的完美結合。通過緩慢而有節奏的動作，幫助你放鬆身心、增強健康、提升專注力。</p>
+                        <h3>適合對象:</h3>
+                        <p>初學者及有經驗者皆可參加(所有年齡層，無論男女)</p>
+                        <h3>課程時間:</h3>
+                        <p>週一、週六：上午 5:30 - 7:00</p>
+                        <h3>上課地點:</h3>
+                        <p>桃園市龍潭區中正路355號(龍潭北二高橋下排球場)</p>
+                        <h3>授課教練:</h3>
+                        <p>由知名太極拳教練領導，擁有多年教學經驗，帶領你一步一步掌握太極拳的要領。</p>
+                        <h3>電話報名：</h3>
+                        <p>蔡涼妹 0933-045600、宋忠英 0915-160202、張素英 0922-478058</p>
+                        <p class="foot-title">從今天開始，用太極拳提升你的健康與內在平靜！</p>
+
+                    </div>
+                </div>
+            </article>
+            <div class="ad">
+                <div class="box2">
+                    <h2>
+                        <img class="logo" src="./img/logo2.png" alt="">
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 頁尾區 -->
+    <div class="footer">
+        <h2>順緣中軸社</h2>
+        <h4>Copyright &copy; 順緣中軸社 版權所有. All rights reserved.</h4>
+    </div>
+</body>
+
+</html>
