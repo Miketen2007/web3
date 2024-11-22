@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="./img/favicon.jpg">
-    <title>順緣中軸社</title>
-    <link rel="stylesheet" href="./lightbox/css/lightbox.css">
+    <title>龍潭中軸社</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             font-family: 'Courier New', Courier, monospace;
+
         }
 
         .wrap {
@@ -23,10 +23,10 @@
         .header {
             width: 100%;
             height: 500px;
-            background-image: url("./img/banner5.png");
+            background-image: url("./img/banner1.png");
             background-repeat: no-repeat;
             background-position: center;
-            background-size:100%;
+            background-size: 100%;
             /* 定位基準點 */
             position: relative;
         }
@@ -148,7 +148,7 @@
 
 
         article {
-            width: 68%;
+            width: 70%;
             order: 2;
         }
 
@@ -157,16 +157,18 @@
         }
 
         .content .box2 {
-            padding-top: 20px;
+            padding-top: 10px;
             margin-bottom: 20px;
         }
 
 
         .box2 .list-type {
+            display: block;
             list-style: none;
             padding: 10px 10px;
             padding-top: 5px;
             margin-left: 40px;
+            /* border: red 1px solid; */
 
         }
 
@@ -186,19 +188,20 @@
 
         .box2 .post-title {
             margin-top: 10px;
-            text-align: center;
-            font-size: 2rem;
-            color: blue;
+            text-align: left;
         }
 
+        .box2 .post-date {
+            color: blue;
+            font-size: 1.5rem;
+        }
 
         .box2 .news-content {
             border: rgb(167, 130, 130) solid;
             padding: 10px;
-            line-height: 2.5rem;
+            line-height: 2rem;
             font-size: 1rem;
             margin-bottom: 20px;
-            text-align: center;
         }
 
         .box2 .foot-title {
@@ -221,22 +224,94 @@
             background-image: url("./img/facebook.png");
             background-repeat: no-repeat;
             background-size: 30px;
-            background-position: 85px center;
+            background-position: 80px center;
         }
 
-
-        .news-content .pic_run {
-            max-width: 100%;
-            background-color: #ccc;
-            padding: 5px;
+        /* 页面整体布局 */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            border: #797270 1px solid;
         }
 
-        .news-content .pic_run img {
-            width: auto;
-            height: 340px;
-            margin: 5px;
-            vertical-align: top;
-            /*垂直對齊目的：為了將圖片下方的預設留白區平均分配在上下的位置*/
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* 新闻列表样式 */
+        .news-list {
+            list-style-type: none;
+        }
+
+        /* 每一条新闻项的样式 */
+        .news-item {
+            background-color: rgb(209, 205, 205);
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(243, 234, 234, 0.096);
+            transition: transform 0.3s ease;
+        }
+
+        .news-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .news-item h2 {
+            font-size: 1.5rem;
+            color: rgb(138, 89, 89);
+            margin-bottom: 10px;
+        }
+
+        .news-item p {
+            font-size: 1rem;
+            color: #3f4444;
+        }
+
+        .news-item .date {
+            font-size: 0.9rem;
+            color: #609ba0;
+            margin-top: 10px;
+        }
+
+        /* 按钮样式 */
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #50667554;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .read-more:hover {
+            background-color: #71bff3;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .news-item h2 {
+                font-size: 1.2rem;
+            }
+
+            .news-item p {
+                font-size: 0.9rem;
+            }
         }
 
 
@@ -259,10 +334,10 @@
 
         <div class="header">
             <h1>
-                <p class="title">桃園市順緣太極拳協會中軸社</p>
+                <p class="title">桃園市順緣太極拳協會龍潭中軸社</p>
             </h1>
             <h2>
-                <img class="logo" src="./img/logo1.png" alt="順緣中軸社">
+                <img class="logo" src="./img/logo1.png" alt="龍潭中軸社">
             </h2>
         </div>
 
@@ -306,64 +381,29 @@
 
             <article>
                 <div class="box2">
-                    <div class="news">
-                        <h2 class="post-title">社團簡介</h2>
-                    </div>
-                    <div class="news-content">
-                        <h2>
-                            我們是一羣喜好太極拳運動的同好,<br> 每天AM 05:30~0700<br> 在龍潭北二高橋下排球場
-                            <br> 進行37式太極拳、傳統13勢太極棒、
-                            <br> 32式太極刀、54式太極劍等套路之授課,
-                            <br> 由教練統一授課並執行各式套路操演與訓練,
-                            <br> 歡迎有興趣的太極拳同好一起來運動養生！
-                        </h2>
-                        <div class="pic_run">
-                            <ul>
-                                <li>
-                                    <a href="./img/01.jpg" data-lightbox="group">
-                                        <img src="./img/01.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/02.jpg" data-lightbox="group">
-                                        <img src="./img/02.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/03.jpg" data-lightbox="group">
-                                        <img src="./img/03.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/04.jpg" data-lightbox="group">
-                                        <img src="./img/04.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/05.jpg" data-lightbox="group">
-                                        <img src="./img/05.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/06.jpg" data-lightbox="group">
-                                        <img src="./img/06.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/08.jpg" data-lightbox="group">
-                                        <img src="./img/07.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/09.jpg" data-lightbox="group">
-                                        <img src="./img/08.jpg" alt="">
-                                    </a>
-                                </li>
-                            </ul>
+                    <div class="container">
+                        <h1>最新消息</h1>
+                        <ul class="news-list">
+                            <li class="news-item">
+                                <h2>鄭子太極拳全國錦標賽，本社榮獲佳績：</h2>
+                                <p>1.37式團體賽第一名</p>
+                                <p>2.54劍個人賽：劉馨韓第一名、劉馥云第二名、趙麗玲第三名</p>
+                                <p>3.四項全能：黃譯德第二名、溫光淇 第三名</p>
+                                <p class="date">2024年09月01日</p>
+                                <a href="#" class="read-more">閱讀更多</a>
+                            </li>
+                            <li class="news-item">
+                                <h2>2024-07-13 曼青盃國際太極拳錦標賽，本社榮獲佳績：</h2>
+                                <p>1.54劍團體賽第二名</p>
+                                <p>2.37式團體賽第四名</p>
+                                <p>3.37式個人賽：溫光淇 第一名、田維國 第二名、劉馨韓 第五名、張素英 第六名</p>
+                                <p>4.54式劍個人賽：張素英 第一名、王瑞青 第六名、黃譯德 第二名、溫光淇 第三名</p>
 
-                        </div>
-                        <p class="foot-title">從今天開始，用太極拳提升你的健康與內在平靜！</p>
+                                <p class="date">2024年07月13日</p>
+                                <a href="#" class="read-more">閱讀更多</a>
+                            </li>
 
+                        </ul>
                     </div>
                 </div>
             </article>
@@ -381,28 +421,6 @@
         <h2>順緣中軸社</h2>
         <h4>Copyright &copy; 順緣中軸社 版權所有. All rights reserved.</h4>
     </div>
-
-    <!-- jQuery 主程式 -->
-    <script src="./js/jquery-1.11.3.min.js"></script>
-    <!-- 燈箱效果主程式 -->
-    <script src="./lightbox/js/lightbox.js"></script>
-    <!-- 旋轉木馬主程式 -->
-    <script src="./js/jquery.jcarousellite.min.js"></script>
-
-    <!-- 自行撰寫JS -->
-    <!-- 駝峰式命名 -->
-    <!-- 小駝峰（第二個單字開始的字首為大寫） -->
-    <!-- 大駝峰（每一個單字開始的字首為大寫） -->
-    <script>
-        $(function () {
-            $('.pic_run').jCarouselLite({
-                auto: 1200,  // 多久時間捲動（以毫秒為單位：1秒=1000毫秒）
-                speed: 600,  // 每次捲動的速度
-                scroll: 1,   // 每次捲動的張數
-                visible: 3,  // 可見的張數
-            });
-        });
-    </script>
 </body>
 
 </html>
