@@ -1,254 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
+    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="./img/favicon.jpg">
+    <link rel="stylesheet" href="index.css">
     <title>順緣中軸社</title>
     <link rel="stylesheet" href="./lightbox/css/lightbox.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .wrap {
-            width: 100%;
-        }
-
-        /* 首頁區 */
-        .header {
-            width: 100%;
-            height: 500px;
-            background-image: url("./img/banner5.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size:100%;
-            /* 定位基準點 */
-            position: relative;
-        }
-
-
-        .header .title {
-            text-align: center;
-            color: #080808;
-            margin-top: 0%;
-            padding-top: 20px;
-        }
-
-        .header .logo {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 150px;
-        }
-
-
-        /* 中間選單區nav */
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: #797270;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* 設定nav選單區內文字框的高度與寬度及背景色 */
-        .nav a {
-            display: block;
-            width: 100px;
-            height: 40px;
-            line-height: 40px;
-            font-weight: 600;
-            background-color: #797270;
-            color: #312d2d;
-            text-decoration: none;
-            text-align: center;
-            transition: all .3s;
-        }
-
-        /* 設定nav選單區所有選單顯示樣式及內間距 */
-
-        .nav ul {
-            list-style: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .nav li {
-            list-style: none;
-            float: left;
-        }
-
-
-        .nav ul li {
-            /* 水平排列 */
-            display: inline;
-            margin-bottom: 1px;
-        }
-
-        .nav li li {
-            /* 解除浮動 */
-            clear: left;
-
-        }
-
-        /* * 解決menu定位推擠 */
-        .nav ul ul {
-            position: absolute;
-            display: none;
-        }
-
-
-        /* 選單區超連結 */
-        .nav ul li a {
-            color: #111111;
-            background-color: rgb(190, 185, 185);
-            text-decoration: none;
-            /* 內間距(縮排) => padding */
-            /* 順時針方向設定 */
-            /* padding: 10px 20px 10px 20px; */
-            padding: 10px 20px;
-            /* 圓角 */
-            border-radius: 5px;
-            /* 外間距 => margin */
-            margin-left: 10px;
-        }
-
-        .nav li:hover ul {
-            display: block;
-        }
-
-
-        /* 選單區超連結被碰到時的變化 */
-        .nav ul li a:hover {
-            background-color: rgb(99, 89, 86);
-            color: #fff;
-            font-size: 1rem;
-
-        }
-
-        /*content 區 */
-        .content {
-            background-color: rgb(238, 235, 234);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        aside {
-            width: 20%;
-            order: 1;
-            text-align: center;
-        }
-
-
-        article {
-            width: 68%;
-            order: 2;
-        }
-
-        .ad {
-            order: 3;
-        }
-
-        .content .box2 {
-            padding-top: 20px;
-            margin-bottom: 20px;
-        }
-
-
-        .box2 .list-type {
-            list-style: none;
-            padding: 10px 10px;
-            padding-top: 5px;
-            margin-left: 40px;
-
-        }
-
-        .list-type a {
-            color: #432;
-            padding: 10px;
-            display: block;
-        }
-
-        .list-type a:hover {
-            color: #0bd;
-        }
-
-        .box2 .news {
-            margin-bottom: 20px;
-        }
-
-        .box2 .post-title {
-            margin-top: 10px;
-            text-align: center;
-            font-size: 2rem;
-            color: blue;
-        }
-
-
-        .box2 .news-content {
-            border: rgb(167, 130, 130) solid;
-            padding: 10px;
-            line-height: 2.5rem;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .box2 .foot-title {
-            color: rgb(48, 8, 225);
-            padding: 10px;
-            font-size: 2rem;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-
-
-        .box2 .logo {
-            width: 100%;
-            height: 100%;
-            margin-left: 10px;
-        }
-
-        .fb a {
-            background-image: url("./img/facebook.png");
-            background-repeat: no-repeat;
-            background-size: 30px;
-            background-position: 85px center;
-        }
-
-
-        .news-content .pic_run {
-            max-width: 100%;
-            background-color: #ccc;
-            padding: 5px;
-        }
-
-        .news-content .pic_run img {
-            width: 400px;
-            height: 300px;
-            margin: 5px;
-            vertical-align: top;
-            /*垂直對齊目的：為了將圖片下方的預設留白區平均分配在上下的位置*/
-        }
-
-
-        /* 頁尾區 */
-        .footer {
-            background-color: #66625f;
-            color: #fff;
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -261,9 +21,7 @@
             <h1>
                 <p class="title">桃園市順緣太極拳協會中軸社</p>
             </h1>
-            <h2>
-                <img class="logo" src="./img/logo1.png" alt="順緣中軸社">
-            </h2>
+            <h2><img class="logo" src="./img/logo1.png" alt="順緣中軸社"></h2>
         </div>
 
         <!-- 頁首區 header 結束 -->
@@ -296,7 +54,7 @@
             <aside>
                 <div class="box2">
                     <ul class="list-type">
-                        <li class="fb"><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
+                        <li><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
                         <li><a href="map.html">練習地點</a></li>
                         <li><a href="contact_us.html">聯絡我們</a></li>
                     </ul>
@@ -306,10 +64,10 @@
 
             <article>
                 <div class="box2">
-                    <div class="news">
-                        <h2 class="post-title">社團簡介</h2>
+                    <div id="news">
+                        <h2 id="post-title">社團簡介</h2>
                     </div>
-                    <div class="news-content">
+                    <div id="news-content">
                         <h2>
                             我們是一羣喜好太極拳運動的同好,<br> 每天AM 05:30~0700<br> 在龍潭北二高橋下排球場
                             <br> 進行37式太極拳、傳統13勢太極棒、
@@ -317,61 +75,27 @@
                             <br> 由教練統一授課並執行各式套路操演與訓練,
                             <br> 歡迎有興趣的太極拳同好一起來運動養生！
                         </h2>
-                        <div class="pic_run">
+                        <div id="pic_run">
                             <ul>
-                                <li>
-                                    <a href="./img/01.jpg" data-lightbox="group">
-                                        <img src="./img/01.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/02.jpg" data-lightbox="group">
-                                        <img src="./img/02.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/03.jpg" data-lightbox="group">
-                                        <img src="./img/03.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/04.jpg" data-lightbox="group">
-                                        <img src="./img/04.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/05.jpg" data-lightbox="group">
-                                        <img src="./img/05.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/06.jpg" data-lightbox="group">
-                                        <img src="./img/06.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/08.jpg" data-lightbox="group">
-                                        <img src="./img/07.jpg" alt="">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./img/09.jpg" data-lightbox="group">
-                                        <img src="./img/08.jpg" alt="">
-                                    </a>
-                                </li>
+                                <li><a href="./img/01.jpg" data-lightbox="group"><img src="./img/01.jpg" alt=""></a></li>
+                                <li><a href="./img/02.jpg" data-lightbox="group"><img src="./img/02.jpg" alt=""></a></li>
+                                <li><a href="./img/03.jpg" data-lightbox="group"><img src="./img/03.jpg" alt=""></a></li>
+                                <li><a href="./img/04.jpg" data-lightbox="group"><img src="./img/04.jpg" alt=""></a></li>
+                                <li><a href="./img/05.jpg" data-lightbox="group"><img src="./img/05.jpg" alt=""></a></li>
+                                <li><a href="./img/06.jpg" data-lightbox="group"><img src="./img/06.jpg" alt=""></a></li>
+                                <li><a href="./img/08.jpg" data-lightbox="group"><img src="./img/08.jpg" alt=""></a></li>
+                                <li><a href="./img/09.jpg" data-lightbox="group"><img src="./img/09.jpg" alt=""></a></li>
                             </ul>
 
                         </div>
-                        <p class="foot-title">從今天開始，用太極拳提升你的健康與內在平靜！</p>
+                        <p id="foot-title">從今天開始，用太極拳提升你的健康與內在平靜！</p>
 
                     </div>
                 </div>
             </article>
             <div class="ad">
                 <div class="box2">
-                    <h2>
-                        <img class="logo" src="./img/logo2.png" alt="">
-                    </h2>
+                    <h2><img class="logo" src="./img/logo2.png" alt=""></h2>
                 </div>
             </div>
         </div>
@@ -395,7 +119,7 @@
     <!-- 大駝峰（每一個單字開始的字首為大寫） -->
     <script>
         $(function () {
-            $('.pic_run').jCarouselLite({
+            $('#pic_run').jCarouselLite({
                 auto: 1200,  // 多久時間捲動（以毫秒為單位：1秒=1000毫秒）
                 speed: 600,  // 每次捲動的速度
                 scroll: 1,   // 每次捲動的張數

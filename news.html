@@ -1,329 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
+    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="./img/favicon.jpg">
+    <link rel="stylesheet" href="index.css">
     <title>龍潭中軸社</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-
-        }
-
-        .wrap {
-            width: 100%;
-        }
-
-        /* 首頁區 */
-        .header {
-            width: 100%;
-            height: 500px;
-            background-image: url("./img/banner1.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100%;
-            /* 定位基準點 */
-            position: relative;
-        }
-
-
-        .header .title {
-            text-align: center;
-            color: #080808;
-            margin-top: 0%;
-            padding-top: 20px;
-        }
-
-        .header .logo {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 150px;
-        }
-
-
-        /* 中間選單區nav */
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: #797270;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* 設定nav選單區內文字框的高度與寬度及背景色 */
-        .nav a {
-            display: block;
-            width: 100px;
-            height: 40px;
-            line-height: 40px;
-            font-weight: 600;
-            background-color: #797270;
-            color: #312d2d;
-            text-decoration: none;
-            text-align: center;
-            transition: all .3s;
-        }
-
-        /* 設定nav選單區所有選單顯示樣式及內間距 */
-
-        .nav ul {
-            list-style: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .nav li {
-            list-style: none;
-            float: left;
-        }
-
-
-        .nav ul li {
-            /* 水平排列 */
-            display: inline;
-            margin-bottom: 1px;
-        }
-
-        .nav li li {
-            /* 解除浮動 */
-            clear: left;
-
-        }
-
-        /* * 解決menu定位推擠 */
-        .nav ul ul {
-            position: absolute;
-            display: none;
-        }
-
-
-        /* 選單區超連結 */
-        .nav ul li a {
-            color: #111111;
-            background-color: rgb(190, 185, 185);
-            text-decoration: none;
-            /* 內間距(縮排) => padding */
-            /* 順時針方向設定 */
-            /* padding: 10px 20px 10px 20px; */
-            padding: 10px 20px;
-            /* 圓角 */
-            border-radius: 5px;
-            /* 外間距 => margin */
-            margin-left: 10px;
-        }
-
-        .nav li:hover ul {
-            display: block;
-        }
-
-
-        /* 選單區超連結被碰到時的變化 */
-        .nav ul li a:hover {
-            background-color: rgb(99, 89, 86);
-            color: #fff;
-            font-size: 1rem;
-
-        }
-
-        /*content 區 */
-        .content {
-            background-color: rgb(238, 235, 234);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        aside {
-            width: 20%;
-            order: 1;
-            text-align: center;
-        }
-
-
-        article {
-            width: 70%;
-            order: 2;
-        }
-
-        .ad {
-            order: 3;
-        }
-
-        .content .box2 {
-            padding-top: 10px;
-            margin-bottom: 20px;
-        }
-
-
-        .box2 .list-type {
-            display: block;
-            list-style: none;
-            padding: 10px 10px;
-            padding-top: 5px;
-            margin-left: 40px;
-            /* border: red 1px solid; */
-
-        }
-
-        .list-type a {
-            color: #432;
-            padding: 10px;
-            display: block;
-        }
-
-        .list-type a:hover {
-            color: #0bd;
-        }
-
-        .box2 .news {
-            margin-bottom: 20px;
-        }
-
-        .box2 .post-title {
-            margin-top: 10px;
-            text-align: left;
-        }
-
-        .box2 .post-date {
-            color: blue;
-            font-size: 1.5rem;
-        }
-
-        .box2 .news-content {
-            border: rgb(167, 130, 130) solid;
-            padding: 10px;
-            line-height: 2rem;
-            font-size: 1rem;
-            margin-bottom: 20px;
-        }
-
-        .box2 .foot-title {
-            color: rgb(48, 8, 225);
-            padding: 10px;
-            font-size: 2rem;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-
-
-        .box2 .logo {
-            width: 100%;
-            height: 100%;
-            margin-left: 10px;
-        }
-
-        .fb a {
-            background-image: url("./img/facebook.png");
-            background-repeat: no-repeat;
-            background-size: 30px;
-            background-position: 80px center;
-        }
-
-        /* 页面整体布局 */
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-            border: #797270 1px solid;
-        }
-
-        /* 标题样式 */
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 30px;
-        }
-
-        /* 新闻列表样式 */
-        .news-list {
-            list-style-type: none;
-        }
-
-        /* 每一条新闻项的样式 */
-        .news-item {
-            background-color: rgb(209, 205, 205);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(243, 234, 234, 0.096);
-            transition: transform 0.3s ease;
-        }
-
-        .news-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .news-item h2 {
-            font-size: 1.5rem;
-            color: rgb(138, 89, 89);
-            margin-bottom: 10px;
-        }
-
-        .news-item p {
-            font-size: 1rem;
-            color: #3f4444;
-        }
-
-        .news-item .date {
-            font-size: 0.9rem;
-            color: #609ba0;
-            margin-top: 10px;
-        }
-
-        /* 按钮样式 */
-        .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            background-color: #50667554;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        .read-more:hover {
-            background-color: #71bff3;
-        }
-
-        /* 响应式设计 */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            .news-item h2 {
-                font-size: 1.2rem;
-            }
-
-            .news-item p {
-                font-size: 0.9rem;
-            }
-        }
-
-
-        /* 頁尾區 */
-        .footer {
-            background-color: #66625f;
-            color: #fff;
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-    </style>
 </head>
 
 <body>
@@ -371,7 +55,7 @@
             <aside>
                 <div class="box2">
                     <ul class="list-type">
-                        <li class="fb"><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
+                        <li><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
                         <li><a href="map.html">練習地點</a></li>
                         <li><a href="contact_us.html">聯絡我們</a></li>
                     </ul>
@@ -381,18 +65,18 @@
 
             <article>
                 <div class="box2">
-                    <div class="container">
+                    <div id="container">
                         <h1>最新消息</h1>
-                        <ul class="news-list">
-                            <li class="news-item">
+                        <ul id="news-list">
+                            <li id="news-item">
                                 <h2>2024-09-01鄭子太極拳全國錦標賽，本社榮獲佳績：</h2>
                                 <p>1.37式團體賽第一名</p>
                                 <p>2.54劍個人賽：劉馨韓第一名、劉馥云第二名、趙麗玲第三名</p>
                                 <p>3.四項全能：黃譯德第二名、溫光淇 第三名</p>
                                 <p class="date">2024年09月01日</p>
-                                <a href="#" class="read-more">閱讀更多</a>
+                                <a href="#" id="read-more">閱讀更多</a>
                             </li>
-                            <li class="news-item">
+                            <li id="news-item">
                                 <h2>2024-07-13 曼青盃國際太極拳錦標賽，本社榮獲佳績：</h2>
                                 <p>1.54劍團體賽第二名</p>
                                 <p>2.37式團體賽第四名</p>
@@ -400,7 +84,7 @@
                                 <p>4.54式劍個人賽：張素英 第一名、王瑞青 第六名、黃譯德 第二名、溫光淇 第三名</p>
 
                                 <p class="date">2024年07月13日</p>
-                                <a href="#" class="read-more">閱讀更多</a>
+                                <a href="#" id="read-more">閱讀更多</a>
                             </li>
 
                         </ul>

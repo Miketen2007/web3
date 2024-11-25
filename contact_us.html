@@ -2,259 +2,13 @@
 <html lang="en">
 
 <head>
+    <html lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" href="./img/favicon.jpg">
-    <title>順緣中軸社</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'Courier New', Courier, monospace;
-        }
-
-        .wrap {
-            width: 100%;
-        }
-
-        /* 首頁區 */
-        .header {
-            width: 100%;
-            height: 500px;
-            background-image: url("./img/banner1.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100%;
-            /* 定位基準點 */
-            position: relative;
-        }
-
-
-        .header .title {
-            text-align: center;
-            color: #080808;
-            margin-top: 0%;
-            padding-top: 20px;
-        }
-
-        .header .logo {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 150px;
-        }
-
-
-        /* 中間選單區nav */
-        .nav {
-            display: flex;
-            justify-content: center;
-            background-color: #797270;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        /* 設定nav選單區內文字框的高度與寬度及背景色 */
-        .nav a {
-            display: block;
-            width: 100px;
-            height: 40px;
-            line-height: 40px;
-            font-weight: 600;
-            background-color: #797270;
-            color: #312d2d;
-            text-decoration: none;
-            text-align: center;
-            transition: all .3s;
-        }
-
-        /* 設定nav選單區所有選單顯示樣式及內間距 */
-
-        .nav ul {
-            list-style: none;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        .nav li {
-            list-style: none;
-            float: left;
-        }
-
-
-        .nav ul li {
-            /* 水平排列 */
-            display: inline;
-            margin-bottom: 1px;
-        }
-
-        .nav li li {
-            /* 解除浮動 */
-            clear: left;
-
-        }
-
-        /* * 解決menu定位推擠 */
-        .nav ul ul {
-            position: absolute;
-            display: none;
-        }
-
-
-        /* 選單區超連結 */
-        .nav ul li a {
-            color: #111111;
-            background-color: rgb(190, 185, 185);
-            text-decoration: none;
-            /* 內間距(縮排) => padding */
-            /* 順時針方向設定 */
-            /* padding: 10px 20px 10px 20px; */
-            padding: 10px 20px;
-            /* 圓角 */
-            border-radius: 5px;
-            /* 外間距 => margin */
-            margin-left: 10px;
-        }
-
-        .nav li:hover ul {
-            display: block;
-        }
-
-
-        /* 選單區超連結被碰到時的變化 */
-        .nav ul li a:hover {
-            background-color: rgb(99, 89, 86);
-            color: #fff;
-            font-size: 1rem;
-
-        }
-
-        /*content 區 */
-        .content {
-            background-color: rgb(238, 235, 234);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-
-        }
-
-        aside {
-            width: 20%;
-            order: 1;
-            text-align: center;
-        }
-
-
-        article {
-            width: 65%;
-            order: 2;
-        }
-
-        .ad {
-            order: 3;
-        }
-
-        .content .box2 {
-
-            padding-top: 10px;
-            margin-bottom: 20px;
-        }
-
-
-        .box2 .list-type {
-            list-style: none;
-            padding: 10px 10px;
-            padding-top: 5px;
-            margin-left: 40px;
-
-        }
-
-        .list-type a {
-            color: #432;
-            padding: 10px;
-            display: block;
-        }
-
-        .list-type a:hover {
-            color: #0bd;
-        }
-
-
-        .box2 .post-title {
-            margin-top: 10px;
-            text-align: left;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
-        /* .box2 .post-date {
-            color: blue;
-            font-size: 1.5rem;
-        } */
-
-        .box2 .news-content {
-            border: rgb(167, 130, 130) solid;
-            padding: 10px;
-            line-height: 2rem;
-            width: 100%;
-            font-size: 1.5rem;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .discript {
-            text-align: left;
-            margin-top: 20px;
-            margin-bottom: 20px;
-            margin-left: 100px;
-
-        }
-
-        .news-content .color_type {
-            margin-top: 10px;
-            color: blue;
-            font-weight: bold;
-
-        }
-
-
-        .box2 .foot-title {
-            color: rgb(48, 8, 225);
-            padding: 10px;
-            font-size: 2rem;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-
-
-        .box2 .logo {
-            width: 100%;
-            height: 100%;
-            margin-left: 10px;
-        }
-
-        .fb a {
-            background-image: url("./img/facebook.png");
-            background-repeat: no-repeat;
-            background-size: 30px;
-            background-position: 90px center;
-        }
-
-
-
-
-        /* 頁尾區 */
-        .footer {
-            background-color: #66625f;
-            color: #fff;
-            text-align: center;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="index.css">
+    <title>龍潭中軸社</title>
 </head>
 
 <body>
@@ -302,7 +56,7 @@
             <aside>
                 <div class="box2">
                     <ul class="list-type">
-                        <li class="fb"><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
+                        <li><a href="https://www.facebook.com/groups/146484823478771">相關社團</a></li>
                         <li><a href="map.html">練習地點</a></li>
                         <li><a href="contact_us.html">聯絡我們</a></li>
                     </ul>
@@ -312,13 +66,13 @@
 
             <article>
                 <div class="box2">
-                    <div class="news-content">
-                        <div class="discript">
+                    <div id="news-content">
+                        <div id="discript">
                             <p>若您有任何服務需求,請以Email方式,或於下方欄位詳細說明，</p>
                             <p>並請留下您的聯絡電話，我們收到後將會儘快與您聯絡，感謝您。</p>
                             <p>地址:桃園市龍潭區中正路355號(龍潭北二高橋下排球場)</p>
                             <p>信箱:mike.ten2007@gmail.com</p>
-                            <p class="color_type">電話：蔡涼妹 0933-045600、宋忠英 0915-160202、張素英 0922-478058</p>
+                            <p id="color_type">電話：蔡涼妹 0933-045600、宋忠英 0915-160202、張素英 0922-478058</p>
                         </div>
                         <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd_Jomi8rHXFrAbDrVTQoWlrGvk0ZuFiTZcT4Hh10Ycg8E5Gg/viewform?embedded=true"
                             width="860" height="700" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
